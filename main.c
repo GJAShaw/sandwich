@@ -19,7 +19,7 @@ enum {PERMUTATION_COUNT = 1 << DIMENSION};
 struct permutation_stats_def {
 	char count_ones;
 	char value_sum;
-}permutation_stats[PERMUTATION_COUNT];
+} permutation_stats[PERMUTATION_COUNT];
 
 
 void get_stats(void)
