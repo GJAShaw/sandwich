@@ -13,7 +13,7 @@ The executable is called `sandwich`. There are no command-line parameters: just 
 
 `sandwich`
 
-The terminal output is a list, which may not seem to be in any particular order (although see "Design" below), of valid digit runs between the 1 and the 9. Each line of output comprises
+The terminal output is a list of all valid digit runs from the set 2 to 8 inclusive. Each line of output comprises
 
 1. the set of digits in the run, in ascending order. Entry into the puzzle grid could be in any order, not necessarily ascending.
 2. the number of digits in the set
@@ -27,8 +27,9 @@ Here's an excerpt of three lines, as an example:
 
 `{ 2 7 } 2 9`
 
-- As mentioned above, the lines don't appear to be in any particular order.
-- the third line shows that { 2 7 } is a 2-digit run summing to 9
+The third line shows that { 2 7 } is a 2-digit run summing to 9, for example.
+
+The lines of output don't appear to be in any particular order - but see "Design" below, if you want to know more.
 
 ## with grep
 You can use `grep` to filter the output for combinations useful in gameplay, e.g. to display combinations summing to 17, you would enter
@@ -44,4 +45,4 @@ The program generates all possible combinations of the digits 2 to 8 inclusive b
 - lowest seven bits are 0010111
 - use bits to mask {8 7 6 5 4 3 2}, giving {0 0 6 0 4 3 2}
 - we have 4 bits set to 1, and the digit sum is 6 + 4 + 3 + 2 = 15
-- the line eventually printed to stdout is `{2 3 4 6} 4 15`
+- the line eventually printed to stdout is `{ 2 3 4 6 } 4 15`
