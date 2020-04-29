@@ -15,7 +15,7 @@ The executable is called `sandwich`. There are no command-line parameters: just 
 
 The terminal output is a list, which may not seem to be in any particular order (although see "Design" below), of valid digit runs between the 1 and the 9. Each line of output comprises
 
-1. the set of digits in the run
+1. the set of digits in the run, in ascending order. Entry into the puzzle grid could be in any order, not necessarily ascending.
 2. the number of digits in the set
 3. the sum of the digits
 
@@ -26,6 +26,9 @@ Here's an excerpt of three lines, as an example:
 `{ 7 } 1 7`
 
 `{ 2 7 } 2 9`
+
+- As mentioned above, the lines don't appear to be in any particular order.
+- the third line shows that { 2 7 } is a 2-digit run summing to 9
 
 ## with grep
 You can use `grep` to filter the output for combinations useful in gameplay, e.g. to display combinations summing to 17, you would enter
