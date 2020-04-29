@@ -21,9 +21,9 @@ The terminal output is a list, which may not seem to be in any particular order 
 
 Here's an excerpt of three lines, as an example:
 
-`{ 2 3 4 5 6 } 5 20
-{ 7 } 1 7
-{ 2 7 } 2 9`
+`{ 2 3 4 5 6 } 5 20`
+`{ 7 } 1 7`
+`{ 2 7 } 2 9`
 
 ## with grep
 You can use `grep` to filter the output for combinations useful in gameplay, e.g. to display combinations summing to 17, you would enter
