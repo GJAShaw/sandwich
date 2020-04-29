@@ -13,7 +13,7 @@ The executable is called `sandwich`. There are no command-line parameters: just 
 
 `sandwich`
 
-The terminal output is a list, which may not seem to be in any particular order (although see "design" below), of valid sandwich sudoku runs between the 1 and the 9. Each line of output comprises
+The terminal output is a list, which may not seem to be in any particular order (although see "design" below), of valid digit runs between the 1 and the 9. Each line of output comprises
 
 1. the set of digits in the run
 2. the number of digits in the set
@@ -25,7 +25,7 @@ You can use `grep` to filter the output for combinations useful in gameplay, e.g
 `sandwich | grep ' 17$'`
 
 # Design
-The program generates all possible combinations of the digits 2 to 8 inclusive by using the lowest 7 bits of a byte as a mask for the digits {8 7 6 5 4 3 2}, and letting the value of that byte run from 0 = 0b00000000 to 63 = 0b01111111. For example, when the byte has value 23:
+The program generates all possible combinations of the digits 2 to 8 inclusive by using the lowest 7 bits of a byte as a selection mask for the elements of the array {8 7 6 5 4 3 2}, and letting the value of that byte run from 0 = 0b00000000 to 63 = 0b01111111. For example, when the byte has value 23:
 
 - 23 = 0b00010111
 - lowest seven bits are 0010111
