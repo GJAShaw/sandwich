@@ -49,7 +49,7 @@ void print_stats(void)
 	for (size_t i = 0; i < PERMUTATION_COUNT; ++i) {
 
 		/* print the addenda */
-		printf("( ");
+		printf("{ ");
 		for (size_t j = 0; j < DIMENSION; ++j) {
 
 			/* is bit j of i set to 1? */
@@ -57,7 +57,7 @@ void print_stats(void)
 				printf("%d ", addenda[j]);
 			}
 		}
-		printf(") ");
+		printf("} ");
 
 		/* print the ones-count and the value sum */
 		printf(
