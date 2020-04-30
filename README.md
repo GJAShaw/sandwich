@@ -5,7 +5,7 @@ Generates number combinations valid for sandwich sudoku puzzles
 It's an Eclipse C project, so if you're using some other build tool then you may have to adapt it.
 
 # Sandwich Sudoku
-Here's a link which explains the game: [Clarity Media explanation](http://www.clarity-media.co.uk/puzzleblog/sandwich-sudoku-puzzles). This application helps with the 9x9 grid version.
+Here's a page which explains the game: [Clarity Media explanation](http://www.clarity-media.co.uk/puzzleblog/sandwich-sudoku-puzzles). This application helps with the 9x9 grid version.
 
 # Usage
 ## standalone
