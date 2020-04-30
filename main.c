@@ -12,29 +12,29 @@
 enum {DIMENSION = 7};
 char addenda[DIMENSION] = {2, 3, 4, 5, 6, 7, 8};
 
-/* number of on/off permutations of DIMENSION bits = 1 bit-shifted left DIMENSION times */
-enum {PERMUTATION_COUNT = 1 << DIMENSION};
+/* number of on/off choices of DIMENSION bits = 1 bit-shifted left DIMENSION times */
+enum {CHOICE_COUNT = 1 << DIMENSION};
 
 /* array of structures to hold information about permutations  */
 struct permutation_stats_def {
-	char count_ones;
+	char ones_count;
 	char value_sum;
-} permutation_stats[PERMUTATION_COUNT];
+} permutation_stats[CHOICE_COUNT];
 
 
 void get_stats(void)
 {
 
-	for (size_t i = 0; i < PERMUTATION_COUNT; ++i) {
+	for (size_t i = 0; i < CHOICE_COUNT; ++i) {
 
-		permutation_stats[i].count_ones = 0;
+		permutation_stats[i].ones_count = 0;
 		permutation_stats[i].value_sum = 0;
 
 		for (size_t j = 0; j < DIMENSION; ++j) {
 
 			/* is bit j of i set to 1? */
 			if (i & (1 << j)) {
-				++(permutation_stats[i].count_ones);
+				++(permutation_stats[i].ones_count);
 				permutation_stats[i].value_sum += addenda[j];
 			}
 		}
@@ -46,7 +46,7 @@ void get_stats(void)
 
 void print_stats(void)
 {
-	for (size_t i = 0; i < PERMUTATION_COUNT; ++i) {
+	for (size_t i = 0; i < CHOICE_COUNT; ++i) {
 
 		/* print the addenda */
 		printf("{ ");
@@ -62,7 +62,7 @@ void print_stats(void)
 		/* print the ones-count and the value sum */
 		printf(
 			"%d %d\n",
-			permutation_stats[i].count_ones,
+			permutation_stats[i].ones_count,
 			permutation_stats[i].value_sum
 		);
 
