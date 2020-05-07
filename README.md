@@ -27,9 +27,9 @@ Here's an excerpt of three lines, as an example:
 
 `{ 2 7 } 2 9`
 
-The third line shows that { 2 7 } is a 2-digit run summing to 9, for example.
+The third line reports that { 2 7 } is a 2-digit run summing to 9.
 
-The lines of output don't appear to be in any particular order - but see "Design" below, if you want to know more.
+The lines of output may not appear to be in any particular order - but see "Design" below, if you want to know more.
 
 ## with grep
 You can use `grep` to filter the output for combinations useful in gameplay, e.g. to display combinations summing to 17, you would enter
@@ -46,3 +46,5 @@ The program generates all possible combinations of the digits 2 to 8 inclusive b
 - use bits to mask {8 7 6 5 4 3 2}, giving {0 0 6 0 4 3 2}
 - we have 4 bits set to 1, and the digit sum is 6 + 4 + 3 + 2 = 15
 - the line eventually printed to stdout is `{ 2 3 4 6 } 4 15`
+
+The output lines are printed in the order of the byte values which generate them.
